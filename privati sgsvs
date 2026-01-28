@@ -1,0 +1,1100 @@
+--================================--
+-- ANTI DOUBLE EXECUTE + RESET KEY
+--================================--
+
+if getgenv().SCRIPT_RUNNING then
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Super Privat",
+        Text = "Script sudah berjalan! Rejoin untuk run ulang.",
+        Duration = 5
+    })
+    return
+end
+getgenv().SCRIPT_RUNNING = true
+
+-- Reset key state supaya selalu minta key
+getgenv().KEY_PASSED = false
+
+-- Hapus GUI lama kalau masih ada
+local Players = game:GetService("Players")
+local lp = Players.LocalPlayer
+
+if lp.PlayerGui:FindFirstChild("KeySystemGUI") then
+    lp.PlayerGui.KeySystemGUI:Destroy()
+end
+local CorrectKey = "hvowoxhvwdyovexfoyfxvwdlxwdoh xefhoxqlcwdhoxvfeyifexulwdcbwixfyicvwdlhcbbbbwdbiyxfcerohrxvlwhfbxwdlh" --
+local Players = game:GetService("Players")
+local lp = Players.LocalPlayer
+ 
+local KeyGui = Instance.new("ScreenGui", lp.PlayerGui)
+KeyGui.ResetOnSpawn = false
+KeyGui.Name = "KeySystemGUI"
+ 
+local Frame = Instance.new("Frame", KeyGui)
+Frame.Size = UDim2.new(0, 320, 0, 180)
+Frame.Position = UDim2.new(0.5, -160, 0.5, -90)
+Frame.BackgroundColor3 = Color3.fromRGB(20,20,20)
+Frame.Active = true
+Frame.Draggable = true
+ 
+local UICorner = Instance.new("UICorner", Frame)
+UICorner.CornerRadius = UDim.new(0, 10)
+ 
+local Title = Instance.new("TextLabel", Frame)
+Title.Size = UDim2.new(1,0,0,40)
+Title.Text = " ENTER KEY"
+Title.TextColor3 = Color3.new(1,1,1)
+Title.BackgroundTransparency = 1
+Title.Font = Enum.Font.GothamBold
+Title.TextSize = 18
+ 
+local Box = Instance.new("TextBox", Frame)
+Box.Size = UDim2.new(0.85,0,0,35)
+Box.Position = UDim2.new(0.075,0,0.35,0)
+Box.PlaceholderText = "Masukkan key..."
+Box.Text = ""
+Box.BackgroundColor3 = Color3.fromRGB(35,35,35)
+Box.TextColor3 = Color3.new(1,1,1)
+Box.ClearTextOnFocus = false
+ 
+local Corner2 = Instance.new("UICorner", Box)
+Corner2.CornerRadius = UDim.new(0, 6)
+ 
+local Btn = Instance.new("TextButton", Frame)
+Btn.Size = UDim2.new(0.5,0,0,35)
+Btn.Position = UDim2.new(0.25,0,0.65,0)
+Btn.Text = "VERIFY"
+Btn.BackgroundColor3 = Color3.fromRGB(0,170,0)
+Btn.TextColor3 = Color3.new(1,1,1)
+Btn.Font = Enum.Font.GothamBold
+ 
+local BtnCorner = Instance.new("UICorner", Btn)
+BtnCorner.CornerRadius = UDim.new(0, 6)
+ 
+--// RESULT
+Btn.MouseButton1Click:Connect(function()
+    if Box.Text == CorrectKey then
+        KeyGui:Destroy()
+        getgenv().KEY_PASSED = true
+    else
+        Btn.Text = "WRONG KEY ❌"
+        Btn.BackgroundColor3 = Color3.fromRGB(170,0,0)
+        task.wait(1)
+        Btn.Text = "VERIFY"
+        Btn.BackgroundColor3 = Color3.fromRGB(0,170,0)
+    end
+end)
+ 
+--// STOP SCRIPT SAMPAI KEY BENAR
+repeat task.wait() until getgenv().KEY_PASSED
+
+
+--// Load OrionLib
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/jensonhirst/Orion/main/source"))()
+
+--// Window
+local Window = OrionLib:MakeWindow({
+    Name = "super privat by khair  (Beta)",
+    HidePremium = false,
+    SaveConfig = true,
+    ConfigFolder = "UniversalHub"
+})
+ 
+do
+    local UIS = game:GetService("UserInputService")
+    local oldMakeTab = Window.MakeTab
+
+    function Window:MakeTab(info)
+        local tab = oldMakeTab(self, info)
+        local oldAddButton = tab.AddButton
+
+        function tab:AddButton(btn)
+            if btn.Callback then
+                local callback = btn.Callback
+                local locked = false
+
+                btn.Callback = function()
+                    if locked then return end
+                    locked = true
+                    task.spawn(callback)
+                    task.delay(0.25, function()
+                        locked = false
+                    end)
+                end
+            end
+            return oldAddButton(self, btn)
+        end
+
+        return tab
+    end
+end
+
+
+-------------------------------------------------------
+--scanner backdoor 
+----------------------------------------------------------
+local PrivatTab = Window:MakeTab({
+    Name = "character ",
+    Icon = "rbxassetid://121476695042375",
+    PremiumOnly = false
+})
+
+PrivatTab:AddButton({
+	Name = "character",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/PnnbmXW3"))()
+   end    
+})
+
+
+----------------------------------------------------------
+--project
+----------------------------------------------------------
+local Tab1 = Window:MakeTab({
+    Name = "project ",
+    Icon = "rbxassetid://98308008166757",
+    PremiumOnly = false
+})
+
+Tab1:AddButton({
+	Name = "project segma v2",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/SgDqtTRP/raw"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "project s3cr3t remake",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/vb7z7Utz/raw"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "project tegma",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/iF7TCeZw/raw"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "project segma v4",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/xzeiXIwV/raw"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "project megma v2",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/yxHLzNpH/raw"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "thank you project",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/zu0OKaqp/raw"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "project s3c3rt (super privat)",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/dngZX2tP/raw"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "project broken spawn v4.1.0",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/nR0WXnVs/raw"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "project broken spawn v 3.0.0",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/nYpHm5sa"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "project broken spawn v 1.0.0",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/NyJfL0ey"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "project sonic",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Hanif290/YoThereSkibidiSigma68/refs/heads/main/Yoshi681SkibidiBoy"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "project sligma",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/QcuBoc7w/raw"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "project lua",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Project-Lua-Inspired-by-Project-Ligma-26224"))()
+  	end    
+})
+
+
+Tab1:AddButton({
+	Name = "project baller",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/t6W9lM9x/raw"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "project duck utg",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/ProBypasserHax1/Idkkk/refs/heads/main/projetduck.lua"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "project euphoria",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/TEST19983/Realrhejrj/refs/heads/main/Refjf"))()
+  	end    
+})
+Tab1:AddButton({
+	Name = "project shiba",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/2b6xi6dd"))()
+  	end    
+})
+Tab1:AddButton({
+	Name = "superx and LooL privat gui ( no trade)",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/DmM6JmsH"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "Sznkidd Private Gui",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/Ub6QVJXn"))()
+  	end    
+})
+----------------------------------------------------------
+--hub
+----------------------------------------------------------
+local Tab2 = Window:MakeTab({
+    Name = "hub",
+    Icon = "rbxassetid://121476695042375",
+    PremiumOnly = false
+})
+
+Tab2:AddButton({
+	Name = "exser new",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/7sO8ckTL/raw"))()
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "exser tsg",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rscripts.net/raw/exser-tsg-by-the-s3cr3t_1759647008158_EbreTaJzuE.txt"))()
+  	end    
+})
+
+
+Tab2:AddButton({
+	Name = "SF remake",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/g00byd0lanxdd/SF-1.5-MOBILE/refs/heads/main/SF%201.5%20MOBILE"))()
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "turmdidai v19",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/4QtUj8wC/raw"))()
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "robhub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-RobHub-55801"))()
+  	end    
+})
+ 
+Tab2:AddButton({
+	Name = "sg GUI red idition",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/gitezgitgit/SG-GUI-RED-EDITION/refs/heads/main/FixedVersion"))()
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "s3laria",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/S9jgk5ri/raw"))()
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "Roblox require ss",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/bvawnSDa"))()
+  	end    
+})
+
+
+Tab2:AddButton({
+	Name = "dreambull ",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FE-Bypass-idk-32121"))()
+  	end    
+})
+
+
+Tab2:AddButton({
+	Name = "fayu hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FAYU-HUB-ALL-GAMES-27055"))()
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "m00pkid privat gui",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-m00pkidd-private-Gui-fanmade-by-B00GKIDZ-27372"))()
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "fe bypass script",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fe-bypass-scripts-33400"))()
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "1x1x1x1's FE GUI",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/GRAVEBUSTER0/GRAVEBUSTER0/main/New.lua"))()
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "idk ( cool)",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/ECCSco/Dynamic-Installer/refs/heads/main/Dynamic%20Island%20V2.lua"))()
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "utg (remake)",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Ultimate-trolling-gui-15461"))()
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "sf executor",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/xj9lkBIv/raw"))()
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "vorex ss",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/MmL5FtY2"))()
+  	end    
+})
+Tab2:AddButton({
+	Name = "epikguy v2",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/C4fGK6Wb"))()
+  	end    
+})
+----------------------------------------------------------
+--executor
+----------------------------------------------------------
+local Tab3 = Window:MakeTab({
+    Name = "executor",
+    Icon = "rbxassetid://121476695042375",
+    PremiumOnly = false
+})
+
+Tab3:AddButton({
+	Name = "1x1x1x11 executor old",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/MCYuFpUN"))()
+  	end    
+})
+
+Tab3:AddButton({
+	Name = "1x1x1x11 executor new",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/3FAV3Abv/raw"))()
+  	end    
+})
+
+Tab3:AddButton({
+	Name = "ss 098x1x executor",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/uL9nsuX8/raw"))()
+  	end    
+})
+
+
+Tab3:AddButton({
+	Name = "ruruxxploit v7",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/zQGANnnQ"))()
+  	end    
+})
+
+Tab3:AddButton({
+	Name = "Unrestricted script project",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Project-Ligma-etc-9323"))()
+  	end    
+})
+
+
+Tab3:AddButton({
+	Name = " arceus x",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/Arceus%20X%20V3"))()
+  	end    
+})
+----------------------------------------------------------
+--backdoor scanner
+----------------------------------------------------------
+
+local Tab4 = Window:MakeTab({
+    Name = "scanner backdoor",
+    Icon = "rbxassetid://121476695042375",
+    PremiumOnly = false
+})
+
+Tab4:AddButton({
+	Name = "lalol backdoor",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/main/Backdoor-Scanner/script"))()
+  	end    
+})
+
+Tab4:AddButton({
+	Name = "backdoor exe v.8.0.0",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/master/source.lua"))()
+  	end    
+})
+
+Tab4:AddButton({
+	Name = "soul ss",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/adceDwMv"))()
+  	end    
+})
+
+
+Tab4:AddButton({
+	Name = "backdoo.exe v6x",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/v6x/source.lua"))()
+  	end    
+})
+
+
+----------------------------------------------------------
+--cmds
+----------------------------------------------------------
+local Tab5 = Window:MakeTab({
+    Name = "cmds",
+    Icon = "rbxassetid://121476695042375",
+    PremiumOnly = false
+})
+
+Tab5:AddButton({
+	Name = "harked",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/JxcExploit/Harkedv2-script/main/Leaked-v2hardked"))()
+  	end    
+})
+
+
+Tab5:AddButton({
+	Name = "Mr Bean admin",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Test4267/mrbean/refs/heads/main/hh"))()
+  	end    
+})
+
+
+Tab5:AddButton({
+	Name = "ssp",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/MagnumIceCream/SecretServicePanel/6fefdf531e86404fb41b7812e7e84b69c7ea728f/ShakesSSP"))()
+  	end    
+})
+
+
+--================================--
+-- ANTI DOUBLE EXECUTE + RESET KEY
+--================================--
+
+if getgenv().SCRIPT_RUNNING then
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Super Privat",
+        Text = "Script sudah berjalan! Rejoin untuk run ulang.",
+        Duration = 5
+    })
+    return
+end
+getgenv().SCRIPT_RUNNING = true
+
+-- Reset key state supaya selalu minta key
+getgenv().KEY_PASSED = false
+
+-- Hapus GUI lama kalau masih ada
+local Players = game:GetService("Players")
+local lp = Players.LocalPlayer
+
+if lp.PlayerGui:FindFirstChild("KeySystemGUI") then
+    lp.PlayerGui.KeySystemGUI:Destroy()
+end
+local CorrectKey = "hvowoxhvwdyovexfoyfxvwdlxwdoh xefhoxqlcwdhoxvfeyifexulwdcbwixfyicvwdlhcbbbbwdbiyxfcerohrxvlwhfbxwdlh" --
+local Players = game:GetService("Players")
+local lp = Players.LocalPlayer
+ 
+local KeyGui = Instance.new("ScreenGui", lp.PlayerGui)
+KeyGui.ResetOnSpawn = false
+KeyGui.Name = "KeySystemGUI"
+ 
+local Frame = Instance.new("Frame", KeyGui)
+Frame.Size = UDim2.new(0, 320, 0, 180)
+Frame.Position = UDim2.new(0.5, -160, 0.5, -90)
+Frame.BackgroundColor3 = Color3.fromRGB(20,20,20)
+Frame.Active = true
+Frame.Draggable = true
+ 
+local UICorner = Instance.new("UICorner", Frame)
+UICorner.CornerRadius = UDim.new(0, 10)
+ 
+local Title = Instance.new("TextLabel", Frame)
+Title.Size = UDim2.new(1,0,0,40)
+Title.Text = " ENTER KEY"
+Title.TextColor3 = Color3.new(1,1,1)
+Title.BackgroundTransparency = 1
+Title.Font = Enum.Font.GothamBold
+Title.TextSize = 18
+ 
+local Box = Instance.new("TextBox", Frame)
+Box.Size = UDim2.new(0.85,0,0,35)
+Box.Position = UDim2.new(0.075,0,0.35,0)
+Box.PlaceholderText = "Masukkan key..."
+Box.Text = ""
+Box.BackgroundColor3 = Color3.fromRGB(35,35,35)
+Box.TextColor3 = Color3.new(1,1,1)
+Box.ClearTextOnFocus = false
+ 
+local Corner2 = Instance.new("UICorner", Box)
+Corner2.CornerRadius = UDim.new(0, 6)
+ 
+local Btn = Instance.new("TextButton", Frame)
+Btn.Size = UDim2.new(0.5,0,0,35)
+Btn.Position = UDim2.new(0.25,0,0.65,0)
+Btn.Text = "VERIFY"
+Btn.BackgroundColor3 = Color3.fromRGB(0,170,0)
+Btn.TextColor3 = Color3.new(1,1,1)
+Btn.Font = Enum.Font.GothamBold
+ 
+local BtnCorner = Instance.new("UICorner", Btn)
+BtnCorner.CornerRadius = UDim.new(0, 6)
+ 
+--// RESULT
+Btn.MouseButton1Click:Connect(function()
+    if Box.Text == CorrectKey then
+        KeyGui:Destroy()
+        getgenv().KEY_PASSED = true
+    else
+        Btn.Text = "WRONG KEY ❌"
+        Btn.BackgroundColor3 = Color3.fromRGB(170,0,0)
+        task.wait(1)
+        Btn.Text = "VERIFY"
+        Btn.BackgroundColor3 = Color3.fromRGB(0,170,0)
+    end
+end)
+ 
+--// STOP SCRIPT SAMPAI KEY BENAR
+repeat task.wait() until getgenv().KEY_PASSED
+
+
+--// Load OrionLib
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/jensonhirst/Orion/main/source"))()
+
+--// Window
+local Window = OrionLib:MakeWindow({
+    Name = "super privat by khair  (Beta)",
+    HidePremium = false,
+    SaveConfig = true,
+    ConfigFolder = "UniversalHub"
+})
+ 
+do
+    local UIS = game:GetService("UserInputService")
+    local oldMakeTab = Window.MakeTab
+
+    function Window:MakeTab(info)
+        local tab = oldMakeTab(self, info)
+        local oldAddButton = tab.AddButton
+
+        function tab:AddButton(btn)
+            if btn.Callback then
+                local callback = btn.Callback
+                local locked = false
+
+                btn.Callback = function()
+                    if locked then return end
+                    locked = true
+                    task.spawn(callback)
+                    task.delay(0.25, function()
+                        locked = false
+                    end)
+                end
+            end
+            return oldAddButton(self, btn)
+        end
+
+        return tab
+    end
+end
+
+
+-------------------------------------------------------
+--scanner backdoor 
+----------------------------------------------------------
+local PrivatTab = Window:MakeTab({
+    Name = "character ",
+    Icon = "rbxassetid://121476695042375",
+    PremiumOnly = false
+})
+
+PrivatTab:AddButton({
+	Name = "character",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/PnnbmXW3"))()
+   end    
+})
+
+
+----------------------------------------------------------
+--project
+----------------------------------------------------------
+local Tab1 = Window:MakeTab({
+    Name = "project ",
+    Icon = "rbxassetid://98308008166757",
+    PremiumOnly = false
+})
+
+Tab1:AddButton({
+	Name = "project segma v2",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/SgDqtTRP/raw"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "project s3cr3t remake",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/vb7z7Utz/raw"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "project tegma",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/iF7TCeZw/raw"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "project segma v4",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/xzeiXIwV/raw"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "project megma v2",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/yxHLzNpH/raw"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "thank you project",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/zu0OKaqp/raw"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "project s3c3rt (super privat)",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/dngZX2tP/raw"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "project broken spawn v4.1.0",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/nR0WXnVs/raw"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "project broken spawn v 3.0.0",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/nYpHm5sa"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "project broken spawn v 1.0.0",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/NyJfL0ey"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "project sonic",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Hanif290/YoThereSkibidiSigma68/refs/heads/main/Yoshi681SkibidiBoy"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "project sligma",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/QcuBoc7w/raw"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "project lua",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Project-Lua-Inspired-by-Project-Ligma-26224"))()
+  	end    
+})
+
+
+Tab1:AddButton({
+	Name = "project baller",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/t6W9lM9x/raw"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "project duck utg",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/ProBypasserHax1/Idkkk/refs/heads/main/projetduck.lua"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "project euphoria",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/TEST19983/Realrhejrj/refs/heads/main/Refjf"))()
+  	end    
+})
+Tab1:AddButton({
+	Name = "project shiba",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/2b6xi6dd"))()
+  	end    
+})
+Tab1:AddButton({
+	Name = "superx and LooL privat gui ( no trade)",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/DmM6JmsH"))()
+  	end    
+})
+
+Tab1:AddButton({
+	Name = "Sznkidd Private Gui",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/Ub6QVJXn"))()
+  	end    
+})
+----------------------------------------------------------
+--hub
+----------------------------------------------------------
+local Tab2 = Window:MakeTab({
+    Name = "hub",
+    Icon = "rbxassetid://121476695042375",
+    PremiumOnly = false
+})
+
+Tab2:AddButton({
+	Name = "exser new",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/7sO8ckTL/raw"))()
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "exser tsg",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rscripts.net/raw/exser-tsg-by-the-s3cr3t_1759647008158_EbreTaJzuE.txt"))()
+  	end    
+})
+
+
+Tab2:AddButton({
+	Name = "SF remake",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/g00byd0lanxdd/SF-1.5-MOBILE/refs/heads/main/SF%201.5%20MOBILE"))()
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "turmdidai v19",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/4QtUj8wC/raw"))()
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "robhub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-RobHub-55801"))()
+  	end    
+})
+ 
+Tab2:AddButton({
+	Name = "sg GUI red idition",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/gitezgitgit/SG-GUI-RED-EDITION/refs/heads/main/FixedVersion"))()
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "s3laria",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/S9jgk5ri/raw"))()
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "Roblox require ss",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/bvawnSDa"))()
+  	end    
+})
+
+
+Tab2:AddButton({
+	Name = "dreambull ",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FE-Bypass-idk-32121"))()
+  	end    
+})
+
+
+Tab2:AddButton({
+	Name = "fayu hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FAYU-HUB-ALL-GAMES-27055"))()
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "m00pkid privat gui",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-m00pkidd-private-Gui-fanmade-by-B00GKIDZ-27372"))()
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "fe bypass script",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fe-bypass-scripts-33400"))()
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "1x1x1x1's FE GUI",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/GRAVEBUSTER0/GRAVEBUSTER0/main/New.lua"))()
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "idk ( cool)",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/ECCSco/Dynamic-Installer/refs/heads/main/Dynamic%20Island%20V2.lua"))()
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "utg (remake)",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Ultimate-trolling-gui-15461"))()
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "sf executor",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/xj9lkBIv/raw"))()
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "vorex ss",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/MmL5FtY2"))()
+  	end    
+})
+Tab2:AddButton({
+	Name = "epikguy v2",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/C4fGK6Wb"))()
+  	end    
+})
+----------------------------------------------------------
+--executor
+----------------------------------------------------------
+local Tab3 = Window:MakeTab({
+    Name = "executor",
+    Icon = "rbxassetid://121476695042375",
+    PremiumOnly = false
+})
+
+Tab3:AddButton({
+	Name = "1x1x1x11 executor old",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/MCYuFpUN"))()
+  	end    
+})
+
+Tab3:AddButton({
+	Name = "1x1x1x11 executor new",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/3FAV3Abv/raw"))()
+  	end    
+})
+
+Tab3:AddButton({
+	Name = "ss 098x1x executor",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/uL9nsuX8/raw"))()
+  	end    
+})
+
+
+Tab3:AddButton({
+	Name = "ruruxxploit v7",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/zQGANnnQ"))()
+  	end    
+})
+
+Tab3:AddButton({
+	Name = "Unrestricted script project",
+	Callback = function()
+      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Project-Ligma-etc-9323"))()
+  	end    
+})
+
+
+Tab3:AddButton({
+	Name = " arceus x",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/Arceus%20X%20V3"))()
+  	end    
+})
+----------------------------------------------------------
+--backdoor scanner
+----------------------------------------------------------
+
+local Tab4 = Window:MakeTab({
+    Name = "scanner backdoor",
+    Icon = "rbxassetid://121476695042375",
+    PremiumOnly = false
+})
+
+Tab4:AddButton({
+	Name = "lalol backdoor",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/main/Backdoor-Scanner/script"))()
+  	end    
+})
+
+Tab4:AddButton({
+	Name = "backdoor exe v.8.0.0",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/master/source.lua"))()
+  	end    
+})
+
+Tab4:AddButton({
+	Name = "soul ss",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/adceDwMv"))()
+  	end    
+})
+
+
+Tab4:AddButton({
+	Name = "backdoo.exe v6x",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/v6x/source.lua"))()
+  	end    
+})
+
+
+----------------------------------------------------------
+--cmds
+----------------------------------------------------------
+local Tab5 = Window:MakeTab({
+    Name = "cmds",
+    Icon = "rbxassetid://121476695042375",
+    PremiumOnly = false
+})
+
+Tab5:AddButton({
+	Name = "harked",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/JxcExploit/Harkedv2-script/main/Leaked-v2hardked"))()
+  	end    
+})
+
+
+Tab5:AddButton({
+	Name = "Mr Bean admin",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Test4267/mrbean/refs/heads/main/hh"))()
+  	end    
+})
+
+
+Tab5:AddButton({
+	Name = "ssp",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/MagnumIceCream/SecretServicePanel/6fefdf531e86404fb41b7812e7e84b69c7ea728f/ShakesSSP"))()
+  	end    
+})
+
+
