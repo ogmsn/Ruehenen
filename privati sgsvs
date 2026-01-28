@@ -1,16 +1,29 @@
 --================================--
 ---================================--
 
--- Reset key state supaya selalu minta key
-getgenv().KEY_PASSED = false
-
--- Hapus GUI lama kalau masih ada
 local Players = game:GetService("Players")
+local StarterGui = game:GetService("StarterGui")
 local lp = Players.LocalPlayer
 
-if lp.PlayerGui:FindFirstChild("KeySystemGUI") then
-    lp.PlayerGui.KeySystemGUI:Destroy()
+-- Flag global (reset kalau rejoin / executor restart)
+getgenv().KEY_PASSED = getgenv().KEY_PASSED or false
+getgenv().SCRIPT_RUNNING = getgenv().SCRIPT_RUNNING or false
+
+-- Notif aja kalau sudah pernah jalan
+if getgenv().SCRIPT_RUNNING and getgenv().KEY_PASSED then
+    StarterGui:SetCore("SendNotification", {
+        Title = "Super Privat",
+        Text = "Script sudah aktif, key tidak diperlukan lagi",
+        Duration = 4
+    })
 end
+
+-- Kalau key belum lolos, tampilkan UI
+if not getgenv().KEY_PASSED then
+    -- Hapus GUI lama kalau masih ada
+    if lp.PlayerGui:FindFirstChild("KeySystemGUI") then
+        lp.PlayerGui.KeySystemGUI:Destroy()
+    end
 
 local CorrectKey = "hvowoxhvwdyovexfoyfxvwdlxwdoh xefhoxqlcwdhoxvfeyifexulwdcbwixfyicvwdlhcbbbbwdbiyxfcerohrxvlwhfbxwdlh" --
 local Players = game:GetService("Players")
