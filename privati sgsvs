@@ -1,32 +1,27 @@
---================================--
+---================================--
 -- SUPER PRIVAT GUI
--- KEY PER SESSION + ANTI DOUBLE RUN
+-- KEY PER SESSION + REOPEN GUI
 --================================--
 
 local Players = game:GetService("Players")
 local StarterGui = game:GetService("StarterGui")
 local lp = Players.LocalPlayer
 
--- Global flags (reset kalau rejoin / executor restart)
+-- Session flags
 getgenv().KEY_PASSED = getgenv().KEY_PASSED or false
 getgenv().SCRIPT_RUNNING = getgenv().SCRIPT_RUNNING or false
 
--- Kalau script sudah jalan & key lolos → notif saja
-if getgenv().SCRIPT_RUNNING and getgenv().KEY_PASSED then
+-- Kalau key sudah lolos, jangan stop script
+if getgenv().KEY_PASSED then
     StarterGui:SetCore("SendNotification", {
         Title = "Super Privat",
-        Text = "Script sudah aktif, key tidak diperlukan lagi",
-        Duration = 4
+        Text = "Key valid — membuka GUI...",
+        Duration = 3
     })
-    return
-end
-
-------------------------------------------------
--- KEY SYSTEM
-------------------------------------------------
-if not getgenv().KEY_PASSED then
-
-    -- Hapus GUI lama kalau ada
+else
+    ------------------------------------------------
+    -- KEY SYSTEM
+    ------------------------------------------------
     if lp.PlayerGui:FindFirstChild("KeySystemGUI") then
         lp.PlayerGui.KeySystemGUI:Destroy()
     end
@@ -64,9 +59,6 @@ if not getgenv().KEY_PASSED then
     Box.TextColor3 = Color3.new(1,1,1)
     Box.ClearTextOnFocus = false
 
-    local Corner2 = Instance.new("UICorner", Box)
-    Corner2.CornerRadius = UDim.new(0, 6)
-
     local Btn = Instance.new("TextButton", Frame)
     Btn.Size = UDim2.new(0.5,0,0,35)
     Btn.Position = UDim2.new(0.25,0,0.65,0)
@@ -74,9 +66,6 @@ if not getgenv().KEY_PASSED then
     Btn.BackgroundColor3 = Color3.fromRGB(0,170,0)
     Btn.TextColor3 = Color3.new(1,1,1)
     Btn.Font = Enum.Font.GothamBold
-
-    local BtnCorner = Instance.new("UICorner", Btn)
-    BtnCorner.CornerRadius = UDim.new(0, 6)
 
     Btn.MouseButton1Click:Connect(function()
         if Box.Text == CorrectKey then
@@ -91,16 +80,9 @@ if not getgenv().KEY_PASSED then
         end
     end)
 
-    repeat task.wait() until getgenv().KEY_PASSED
+    repeat task.wait(0.1) until getgenv().KEY_PASSED
 end
 
-------------------------------------------------
--- SCRIPT RUNNING
-------------------------------------------------
-getgenv().SCRIPT_RUNNING = true
-
-------------------------------------------------
--- LOAD ORION
 ------------------------------------------------
 local OrionLib = loadstring(game:HttpGet(
     "https://raw.githubusercontent.com/jensonhirst/Orion/main/source"
@@ -113,36 +95,7 @@ local Window = OrionLib:MakeWindow({
     ConfigFolder = "UniversalHub"
 })
 
-------------------------------------------------
--- ANTI DOUBLE CLICK BUTTON
-------------------------------------------------
-do
-    local oldMakeTab = Window.MakeTab
 
-    function Window:MakeTab(info)
-        local tab = oldMakeTab(self, info)
-        local oldAddButton = tab.AddButton
-
-        function tab:AddButton(btn)
-            if btn.Callback then
-                local callback = btn.Callback
-                local locked = false
-
-                btn.Callback = function()
-                    if locked then return end
-                    locked = true
-                    task.spawn(callback)
-                    task.delay(0.3, function()
-                        locked = false
-                    end)
-                end
-            end
-            return oldAddButton(self, btn)
-        end
-
-        return tab
-    end
-end
         
 -------------------------------------------------------
 --scanner backdoor 
