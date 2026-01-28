@@ -1,110 +1,122 @@
 --================================--
----================================--
+-- SUPER PRIVAT GUI
+-- KEY PER SESSION + ANTI DOUBLE RUN
+--================================--
 
 local Players = game:GetService("Players")
 local StarterGui = game:GetService("StarterGui")
 local lp = Players.LocalPlayer
 
--- Flag global (reset kalau rejoin / executor restart)
+-- Global flags (reset kalau rejoin / executor restart)
 getgenv().KEY_PASSED = getgenv().KEY_PASSED or false
 getgenv().SCRIPT_RUNNING = getgenv().SCRIPT_RUNNING or false
 
--- Notif aja kalau sudah pernah jalan
+-- Kalau script sudah jalan & key lolos → notif saja
 if getgenv().SCRIPT_RUNNING and getgenv().KEY_PASSED then
     StarterGui:SetCore("SendNotification", {
         Title = "Super Privat",
         Text = "Script sudah aktif, key tidak diperlukan lagi",
         Duration = 4
     })
+    return
 end
 
--- Kalau key belum lolos, tampilkan UI
+------------------------------------------------
+-- KEY SYSTEM
+------------------------------------------------
 if not getgenv().KEY_PASSED then
-    -- Hapus GUI lama kalau masih ada
+
+    -- Hapus GUI lama kalau ada
     if lp.PlayerGui:FindFirstChild("KeySystemGUI") then
         lp.PlayerGui.KeySystemGUI:Destroy()
     end
 
-local CorrectKey = "hvowoxhvwdyovexfoyfxvwdlxwdoh xefhoxqlcwdhoxvfeyifexulwdcbwixfyicvwdlhcbbbbwdbiyxfcerohrxvlwhfbxwdlh" --
-local Players = game:GetService("Players")
-local lp = Players.LocalPlayer
- 
-local KeyGui = Instance.new("ScreenGui", lp.PlayerGui)
-KeyGui.ResetOnSpawn = false
-KeyGui.Name = "KeySystemGUI"
- 
-local Frame = Instance.new("Frame", KeyGui)
-Frame.Size = UDim2.new(0, 320, 0, 180)
-Frame.Position = UDim2.new(0.5, -160, 0.5, -90)
-Frame.BackgroundColor3 = Color3.fromRGB(20,20,20)
-Frame.Active = true
-Frame.Draggable = true
- 
-local UICorner = Instance.new("UICorner", Frame)
-UICorner.CornerRadius = UDim.new(0, 10)
- 
-local Title = Instance.new("TextLabel", Frame)
-Title.Size = UDim2.new(1,0,0,40)
-Title.Text = " ENTER KEY"
-Title.TextColor3 = Color3.new(1,1,1)
-Title.BackgroundTransparency = 1
-Title.Font = Enum.Font.GothamBold
-Title.TextSize = 18
- 
-local Box = Instance.new("TextBox", Frame)
-Box.Size = UDim2.new(0.85,0,0,35)
-Box.Position = UDim2.new(0.075,0,0.35,0)
-Box.PlaceholderText = "Masukkan key..."
-Box.Text = ""
-Box.BackgroundColor3 = Color3.fromRGB(35,35,35)
-Box.TextColor3 = Color3.new(1,1,1)
-Box.ClearTextOnFocus = false
- 
-local Corner2 = Instance.new("UICorner", Box)
-Corner2.CornerRadius = UDim.new(0, 6)
- 
-local Btn = Instance.new("TextButton", Frame)
-Btn.Size = UDim2.new(0.5,0,0,35)
-Btn.Position = UDim2.new(0.25,0,0.65,0)
-Btn.Text = "VERIFY"
-Btn.BackgroundColor3 = Color3.fromRGB(0,170,0)
-Btn.TextColor3 = Color3.new(1,1,1)
-Btn.Font = Enum.Font.GothamBold
- 
-local BtnCorner = Instance.new("UICorner", Btn)
-BtnCorner.CornerRadius = UDim.new(0, 6)
- 
---// RESULT
-Btn.MouseButton1Click:Connect(function()
-    if Box.Text == CorrectKey then
-        KeyGui:Destroy()
-        getgenv().KEY_PASSED = true
-    else
-        Btn.Text = "WRONG KEY ❌"
-        Btn.BackgroundColor3 = Color3.fromRGB(170,0,0)
-        task.wait(1)
-        Btn.Text = "VERIFY"
-        Btn.BackgroundColor3 = Color3.fromRGB(0,170,0)
-    end
-end)
- 
---// STOP SCRIPT SAMPAI KEY BENAR
-repeat task.wait() until getgenv().KEY_PASSED
+    local CorrectKey = "hvowoxhvwdyovexfoyfxvwdlxwdoh xefhoxqlcwdhoxvfeyifexulwdcbwixfyicvwdlhcbbbbwdbiyxfcerohrxvlwhfbxwdlh"
 
+    local KeyGui = Instance.new("ScreenGui", lp.PlayerGui)
+    KeyGui.Name = "KeySystemGUI"
+    KeyGui.ResetOnSpawn = false
 
---// Load OrionLib
-local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/jensonhirst/Orion/main/source"))()
+    local Frame = Instance.new("Frame", KeyGui)
+    Frame.Size = UDim2.new(0, 320, 0, 180)
+    Frame.Position = UDim2.new(0.5, -160, 0.5, -90)
+    Frame.BackgroundColor3 = Color3.fromRGB(20,20,20)
+    Frame.Active = true
+    Frame.Draggable = true
 
---// Window
+    local UICorner = Instance.new("UICorner", Frame)
+    UICorner.CornerRadius = UDim.new(0, 10)
+
+    local Title = Instance.new("TextLabel", Frame)
+    Title.Size = UDim2.new(1,0,0,40)
+    Title.Text = "ENTER KEY"
+    Title.TextColor3 = Color3.new(1,1,1)
+    Title.BackgroundTransparency = 1
+    Title.Font = Enum.Font.GothamBold
+    Title.TextSize = 18
+
+    local Box = Instance.new("TextBox", Frame)
+    Box.Size = UDim2.new(0.85,0,0,35)
+    Box.Position = UDim2.new(0.075,0,0.35,0)
+    Box.PlaceholderText = "Masukkan key..."
+    Box.Text = ""
+    Box.BackgroundColor3 = Color3.fromRGB(35,35,35)
+    Box.TextColor3 = Color3.new(1,1,1)
+    Box.ClearTextOnFocus = false
+
+    local Corner2 = Instance.new("UICorner", Box)
+    Corner2.CornerRadius = UDim.new(0, 6)
+
+    local Btn = Instance.new("TextButton", Frame)
+    Btn.Size = UDim2.new(0.5,0,0,35)
+    Btn.Position = UDim2.new(0.25,0,0.65,0)
+    Btn.Text = "VERIFY"
+    Btn.BackgroundColor3 = Color3.fromRGB(0,170,0)
+    Btn.TextColor3 = Color3.new(1,1,1)
+    Btn.Font = Enum.Font.GothamBold
+
+    local BtnCorner = Instance.new("UICorner", Btn)
+    BtnCorner.CornerRadius = UDim.new(0, 6)
+
+    Btn.MouseButton1Click:Connect(function()
+        if Box.Text == CorrectKey then
+            getgenv().KEY_PASSED = true
+            KeyGui:Destroy()
+        else
+            Btn.Text = "WRONG KEY ❌"
+            Btn.BackgroundColor3 = Color3.fromRGB(170,0,0)
+            task.wait(1)
+            Btn.Text = "VERIFY"
+            Btn.BackgroundColor3 = Color3.fromRGB(0,170,0)
+        end
+    end)
+
+    repeat task.wait() until getgenv().KEY_PASSED
+end
+
+------------------------------------------------
+-- SCRIPT RUNNING
+------------------------------------------------
+getgenv().SCRIPT_RUNNING = true
+
+------------------------------------------------
+-- LOAD ORION
+------------------------------------------------
+local OrionLib = loadstring(game:HttpGet(
+    "https://raw.githubusercontent.com/jensonhirst/Orion/main/source"
+))()
+
 local Window = OrionLib:MakeWindow({
-    Name = "super privat by khair  (Beta)",
+    Name = "Super Privat by Khair (Beta)",
     HidePremium = false,
     SaveConfig = true,
     ConfigFolder = "UniversalHub"
 })
- 
+
+------------------------------------------------
+-- ANTI DOUBLE CLICK BUTTON
+------------------------------------------------
 do
-    local UIS = game:GetService("UserInputService")
     local oldMakeTab = Window.MakeTab
 
     function Window:MakeTab(info)
@@ -120,7 +132,7 @@ do
                     if locked then return end
                     locked = true
                     task.spawn(callback)
-                    task.delay(0.25, function()
+                    task.delay(0.3, function()
                         locked = false
                     end)
                 end
@@ -131,8 +143,7 @@ do
         return tab
     end
 end
-
-
+        
 -------------------------------------------------------
 --scanner backdoor 
 ----------------------------------------------------------
