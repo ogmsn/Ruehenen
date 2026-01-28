@@ -390,6 +390,13 @@ Tab2:AddButton({
       		loadstring(game:HttpGet("https://pastebin.com/raw/C4fGK6Wb"))()
   	end    
 })
+
+Tab2:AddButton({
+	Name = "Proximity Hub Max 15 key Proximity6H",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/HyperionV8/Proximity-Private-Hub/refs/heads/main/obfuscated_script-1745069419608.lua.txt"))()
+  	end    
+})
 ----------------------------------------------------------
 --executor
 ----------------------------------------------------------
