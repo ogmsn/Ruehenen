@@ -1,16 +1,5 @@
 --================================--
--- ANTI DOUBLE EXECUTE + RESET KEY
---================================--
-
-if getgenv().SCRIPT_RUNNING then
-    game:GetService("StarterGui"):SetCore("SendNotification", {
-        Title = "Super Privat",
-        Text = "Script sudah berjalan! Rejoin untuk run ulang.",
-        Duration = 5
-    })
-    return
-end
-getgenv().SCRIPT_RUNNING = true
+---================================--
 
 -- Reset key state supaya selalu minta key
 getgenv().KEY_PASSED = false
@@ -22,6 +11,7 @@ local lp = Players.LocalPlayer
 if lp.PlayerGui:FindFirstChild("KeySystemGUI") then
     lp.PlayerGui.KeySystemGUI:Destroy()
 end
+
 local CorrectKey = "hvowoxhvwdyovexfoyfxvwdlxwdoh xefhoxqlcwdhoxvfeyifexulwdcbwixfyicvwdlhcbbbbwdbiyxfcerohrxvlwhfbxwdlh" --
 local Players = game:GetService("Players")
 local lp = Players.LocalPlayer
