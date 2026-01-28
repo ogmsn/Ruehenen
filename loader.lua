@@ -783,7 +783,7 @@ local PrivatTab100 = Window:MakeTab({
 })
 
 PrivatTab100:AddButton({
-	Name = "back,
+	Name = "back",
 	Callback = function()
       		loadstring(game:HttpGet("https://raw.githubusercontent.com/ogmsn/Ruehenen/refs/heads/main/privati%20sgsvs"))()
   	end    
