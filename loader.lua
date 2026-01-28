@@ -768,3 +768,24 @@ PrivatTab10:AddButton({
       		loadstring(game:HttpGet("https://pastefy.app/dA68xt1p/raw"))()
   	end    
 })
+
+PrivatTab10:AddButton({
+	Name = "big d##k",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastefy.app/az0yaa2e/raw"))()
+  	end    
+})
+
+local PrivatTab100 = Window:MakeTab({
+    Name = "back",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+PrivatTab100:AddButton({
+	Name = "back,
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/ogmsn/Ruehenen/refs/heads/main/privati%20sgsvs"))()
+  	end    
+})
+
