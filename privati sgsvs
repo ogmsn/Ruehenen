@@ -85,7 +85,7 @@ end
 
 ------------------------------------------------
 local OrionLib = loadstring(game:HttpGet(
-    "https://raw.githubusercontent.com/jensonhirst/Orion/main/source"
+    "https://pastebin.com/raw/WRUyYTdY"
 ))()
 
 local Window = OrionLib:MakeWindow({
