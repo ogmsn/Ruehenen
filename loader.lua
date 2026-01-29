@@ -1,5 +1,5 @@
 --// Load OrionLib
-local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/jensonhirst/Orion/main/source"))()
+local OrionLib = loadstring(game:HttpGet("https://pastebin.com/raw/WRUyYTdY"))()
 
 --// Window
 local Window = OrionLib:MakeWindow({
