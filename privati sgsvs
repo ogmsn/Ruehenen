@@ -89,7 +89,7 @@ local OrionLib = loadstring(game:HttpGet(
 ))()
 
 local Window = OrionLib:MakeWindow({
-    Name = "Super Privat by Khair (Beta)",
+    Name = "Super Privat by xploite_indo (Beta)",
     HidePremium = false,
     SaveConfig = true,
     ConfigFolder = "UniversalHub"
