@@ -776,6 +776,20 @@ PrivatTab10:AddButton({
   	end    
 })
 
+PrivatTab10:AddButton({
+	Name = " neptunian v",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/ian49972/SCRIPTS/refs/heads/main/NepV"))()
+  	end    
+})
+
+PrivatTab10:AddButton({
+	Name = " hollow slayer",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/ian49972/SCRIPTS/refs/heads/main/HSlayer"))()
+  	end    
+})
+
 local PrivatTab100 = Window:MakeTab({
     Name = "back",
     Icon = "rbxassetid://4483345998",
