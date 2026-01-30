@@ -1080,7 +1080,7 @@ local Tab6 = Window:MakeTab({
 Tab6:AddButton({
 	Name = "require",
 	Callback = function()
-      		loadstring(game:HttpGet("https://raw.githubusercontent.com/ogmsn/Ruehenen/refs/heads/main/Requsust"))()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/ogmsn/Ruehenen/main/Requsust"))()
   	end    
 })
 
