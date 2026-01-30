@@ -1071,4 +1071,16 @@ Tab5:AddButton({
   	end    
 })
 
+local Tab6 = Window:MakeTab({
+    Name = "require project",
+    Icon = "rbxassetid://121476695042375",
+    PremiumOnly = false
+})
+
+Tab6:AddButton({
+	Name = "require",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/ogmsn/Ruehenen/refs/heads/main/Requsust"))()
+  	end    
+})
 
