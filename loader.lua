@@ -162,6 +162,8 @@ PrivatTab2:AddButton({
   end    
 })
 
+-so tau
+
 PrivatTab2:AddButton({
     Name = "all seeing hand",
     Callback = function()
