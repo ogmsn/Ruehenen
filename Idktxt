@@ -1,0 +1,558 @@
+-- =====================
+-- SCRIPT MAP
+-- =====================
+-- =====================
+-- SCRIPT MAP (Kaax GUI DIHAPUS)
+-- =====================
+local scriptMap = {
+
+["B00ngui"] = function()  
+	if setclipboard then  
+		setclipboard('require(86374455808565).b00n_hacks("khairplaynow")')  
+	end  
+end,  
+
+["P00gnGUI"] = function()  
+	if setclipboard then  
+		setclipboard('require(13351082619).p00g("khairplaynow")')  
+	end  
+end,  
+
+["User1337 v3"] = function()  
+	if setclipboard then  
+		setclipboard('require(13823738962).u1guiv3("khairplaynow")')  
+	end  
+end,  
+
+["K00pgui (op) GUI v7"] = function()  
+	if setclipboard then  
+		setclipboard('require(119821432715260).ProjectJTIbyjondow665anditsnotskeletonsuperpriv3eo9k7("khairplaynow")')  
+	end
+
+end,
+
+["N00Z93 GUI v7"] = function()  
+	if setclipboard then  
+		setclipboard('require(131633407369490).v7("khairplaynow")')  
+	end
+
+end,
+
+["Kaax gui "] = function()
+if setclipboard then
+setclipboard('require(14482000069).kaaxgui("khairplaynow")')
+end
+end,
+
+["Undectable gui "] = function()
+if setclipboard then
+setclipboard('require(138524951943134):Extreme("khairplaynow")')
+end
+end,
+
+["X00zgui private "] = function()
+if setclipboard then
+setclipboard('require(16938842033):efftiruffdrte("khairplaynow")')
+end
+end,
+
+["John doe v2 "] = function()
+if setclipboard then
+setclipboard('require(16666540998).john("khairplaynow")')
+end
+end,
+
+["Dryq74 gui "] = function()
+if setclipboard then
+setclipboard('require(134839673375508).Dryq74gui("khairplaynow")')
+end
+end,
+
+["Project  c00lHaxx "] = function()
+if setclipboard then
+setclipboard('require(11064497738)("khairplaynow")')
+end
+end,
+
+["GiGXxX4 GUI "] = function()
+if setclipboard then
+setclipboard('require(105134646148619).GiGXxX4Gui("khairplaynow")')
+end
+end,
+
+["144anz Hub GUI "] = function()
+if setclipboard then
+setclipboard('require(16212277443):SHHH144anzHUB("khairplaynow")')
+end
+end,
+
+["Weapon tool "] = function()  
+	if setclipboard then  
+		setclipboard('require(4793119635).lisiGUNS ("khairplaynow")')  
+	end  
+end,  
+
+["Parkor"] = function()  
+	if setclipboard then  
+		setclipboard('require(4560004705).load("khairplaynow")')  
+	end  
+end,  
+
+["Cars GUI"] = function()  
+	if setclipboard then  
+		setclipboard('require(5130989214).load("khairplaynow")')  
+	end  
+end,  
+
+["F3x"] = function()  
+	if setclipboard then  
+		setclipboard('require(4869378421).F3X("khairplaynow")')  
+	end  
+end,  
+["Lucky star GUI"] = function()  
+	if setclipboard then  
+		setclipboard('require(97850077338637).load("khairplaynow")')  
+	end  
+end,  
+
+["Sin Unleashed"] = function()  
+	if setclipboard then  
+		setclipboard("require(2787132106): Run('khairplaynow', 'i baked you a pie')") 
+	end  
+end,  
+
+["Pen"] = function()  
+	if setclipboard then  
+		setclipboard('require(2913342850).load("khairplaynow")')  
+	end  
+end,  
+
+
+["Insanity Powers"] = function()  
+	if setclipboard then  
+		setclipboard("require(2787111216): Run('khairplaynow', 'i baked you a pie')")  
+	end  
+end,  
+
+["Pet leash"] = function()  
+	if setclipboard then  
+		setclipboard("require(8375420639).get('PetLeash', 'khairplaynow')")  
+	end  
+end,  
+
+["Frige"] = function()  
+	if setclipboard then  
+		setclipboard('require(5813737611).load("khairplaynow")')  
+	end  
+end,  
+
+["Nuce timer"] = function()  
+	if setclipboard then  
+		setclipboard('require(4867426485):SD("khairplaynow")')  
+	end  
+end,  
+
+
+
+
+
+["Ozbamet gui "] = function()
+if setclipboard then
+setclipboard('require(129354578569589):Hload("khairplaynow")')
+end
+end,
+
+["Project ligma "] = function()
+if setclipboard then
+setclipboard('require(10027382472)("khairplaynow")')
+end
+end,
+
+["Stratosphere "] = function()
+if setclipboard then
+setclipboard('require(6590963180).load("khairplaynow")')
+end
+end,
+
+["Topk4k v4 "] = function()
+if setclipboard then
+setclipboard('require(4253460888).die("khairplaynow")')
+end
+end,
+
+["47. GUI v1 "] = function()
+if setclipboard then
+setclipboard('require(112283448706371).fortyseven("khairplaynow")')
+end
+end,
+
+["Idk gui "] = function()
+if setclipboard then
+setclipboard('require(14085617275).ProblemUser("khairplaynow")')
+end
+end,
+
+["Cr4ck GUI v4 "] = function()
+if setclipboard then
+setclipboard('require(119339988976903).Erika("khairplaynow")')
+end
+end,
+
+["Cr4kgui v4.20 "] = function()
+if setclipboard then
+setclipboard('require(123464487058094).uhh("khairplaynow")')
+end
+end,
+
+["Crykidd GUI  v4 "] = function()
+if setclipboard then
+setclipboard('require(71786971855639):cry("khairplaynow")')
+end
+end,
+
+["Blox ploit "] = function()
+if setclipboard then
+setclipboard('require(73262538162805):BloxLoad("khairplaynow")')
+end
+end,
+
+["Kiikar  "] = function()
+if setclipboard then
+setclipboard('require(87994998159793).kiikar("khairplaynow")')
+end
+end,
+
+["Dreambull gui "] = function()
+if setclipboard then
+setclipboard('require(15232587754).DreamGUI("khairplaynow")')
+end
+end,
+
+["Str0ng gui v7 "] = function()
+if setclipboard then
+setclipboard('require(109143660318442).v7("khairplaynow")')
+end
+end,
+
+["Duper971's super privat gui v1.3 "] = function()
+if setclipboard then
+setclipboard('require(77061679615364).SuperGuiv2("khairplaynow")')
+end
+end,
+
+["Super privat gui "] = function()
+if setclipboard then
+setclipboard('require(93041857120498).epic("lol")LinuxDaBuilderEpicPass002')
+  end
+end,
+["L00pzworld privat  "] = function()
+if setclipboard then
+setclipboard('require(16316592650).chickensaretastyandverymuchyummybut12345djsfnsdifjbiBHDFBEFIHEZBFIUESH0("khairplaynow")')
+end
+end,
+
+["Itsnotskeletons cool GUI v2  "] = function()
+if setclipboard then
+setclipboard('require(15498571252).omaygott("khairplaynow")')
+end
+end,
+
+["Itsnotskeleton GUI ultimate   "] = function()
+if setclipboard then
+setclipboard('require(15537590527).Ulti("khairplaynow")')
+end
+end,
+
+["Di#k  "] = function()
+if setclipboard then
+setclipboard('require(140321069022189).pingas("khairplaynow")')
+end
+end,
+
+["Grove ss  "] = function()
+if setclipboard then
+setclipboard("require(17329115004).ServerSideV101FirstVersion('khairplaynow')")
+end
+end,
+
+["GUI v1 privat  "] = function()
+if setclipboard then
+setclipboard('require(139159200630586):Matz("khairplaynow")')
+end
+end,
+
+["Karl gui  "] = function()
+if setclipboard then
+setclipboard('require(15492639454).wellbefine("khairplaynow",')
+end
+end,
+
+["Executor by sharkgod  "] = function()
+if setclipboard then
+setclipboard('require(7720644326).SharkGodsLoggerLeak("khairplaynow")')
+end
+end,
+
+["Xxxomer12345678 gui  "] = function()
+if setclipboard then
+setclipboard('require(16852821798).omerkidd("khairplaynow")')
+end
+end,
+
+["Omer v3  "] = function()
+if setclipboard then
+setclipboard('require(17187253685).omerv3("khairplaynow")')
+end
+end,
+
+["M00pkidd GUI v1 (privat)  "] = function()
+if setclipboard then
+setclipboard('require(17340805099).ez("khairplaynow")')
+end
+end,
+
+["HXXORMAN GUI V1  "] = function()
+if setclipboard then
+setclipboard('require(107261437531537).hxmv1("khairplaynow")')
+end
+end,
+
+["Tymek GUI v1 (ultimate)  "] = function()
+if setclipboard then
+setclipboard('require(136385736086501):eza("khairplaynow")')
+end
+end,
+
+["Blous2pooky GUI v2  "] = function()
+if setclipboard then
+setclipboard('require(111344520814454):load("khairplaynow")')
+end
+end,
+
+["Blous2pooky GUI v1  "] = function()
+if setclipboard then
+setclipboard('require(132099457182422):blue2spooky("khairplaynow")')
+end
+end,
+
+["Project brickma  "] = function()
+if setclipboard then
+setclipboard('require(112945327108627).Brickma("khairplaynow")')
+end
+end,
+
+["Lux gui x"] = function()
+if setclipboard then
+setclipboard('require(110273353133166):LUX("khairplaynow")')
+end
+end,
+
+["Bytegui v5  "] = function()
+if setclipboard then
+setclipboard('require(111093930782644).Private("khairplaynow")')
+end
+end,
+
+["Project zaza  "] = function()
+if setclipboard then
+setclipboard('require(135951907239923):Z("khairplaynow","ProjectZ")')
+end
+end,
+["Bpolaria  "] = function()
+if setclipboard then
+setclipboard('require(88477009909590):Pload("khairplaynow")')
+end
+end,
+
+["C4N0F's GUI v15 "] = function()
+if setclipboard then
+setclipboard('require(94824511041258):C4N0FV16("khairplaynow")')
+end
+end,
+
+["K00bgui "] = function()
+if setclipboard then
+setclipboard('require(17510112223).load("khairplaynow")')
+end
+end,
+
+["Y00zkidd GUI v1 "] = function()
+if setclipboard then
+setclipboard('require(15297073639):y00zgui("khairplaynow")')
+end
+end,
+
+["4nn1gui v2 "] = function()
+if setclipboard then
+setclipboard('require(13372068423).kingto4nn1("khairplaynow")')
+end
+end,
+
+["Darius mini edition  "] = function()
+if setclipboard then
+setclipboard('require(0x3fd17191c).DariusSiSupramSkid("khairplaynow")')
+end
+end,
+
+["Project sonic  "] = function()
+if setclipboard then
+setclipboard('require(5104783290).projectreptilev3leaklolz("khairplaynow")')
+end
+end,
+
+["t00t GUI  "] = function()
+if setclipboard then
+setclipboard('require(15622251265).ttkdd("khairplaynow")')
+end
+end,
+
+["Undetectable GUI  "] = function()
+if setclipboard then
+setclipboard('require(15204636597).undetectb("khairplaynow")')
+end
+end,
+
+["Anonymous gui  "] = function()
+if setclipboard then
+setclipboard('require(12348286755).load("khairplaynow")')
+end
+end,
+
+["Potato gui  "] = function()
+if setclipboard then
+setclipboard('require(18939695638).potatoneverdie("khairplaynow")')
+end
+end,
+
+["N00zgui v666  "] = function()
+if setclipboard then
+setclipboard('require(17119737342).n00z666("khairplaynow")')
+end
+end,
+
+["Darius gui v5  "] = function()
+if setclipboard then
+setclipboard('require(15330247645).load("khairplaynow")')
+end
+end,
+
+["Darius mini edition   "] = function()
+if setclipboard then
+setclipboard('require(17131051292).DariusSiSupramSkid("khairplaynow")')
+end
+end,
+
+["Topk3k v5   "] = function()
+if setclipboard then
+setclipboard('require(14006218970)("khairplaynow")')
+end
+end,
+
+["TXxiqoqian GUI v3 "] = function()
+if setclipboard then
+setclipboard('require(83006341888753).TXxiaoqian("khairplaynow")')
+end
+end,
+
+["TXQ7891 GUI  "] = function()
+if setclipboard then
+setclipboard('require(72365755604935).TXQ7891("khairplaynow")')
+end
+end,
+
+["TXxiqoqian GUI v3 "] = function()
+if setclipboard then
+setclipboard('require(83006341888753).TXxiaoqian("khairplaynow")')
+end
+end,
+["kxglkiid gui v4 "] = function()
+if setclipboard then
+setclipboard('require(72163081206871).ide("khairplaynow")')
+end
+end,
+
+["Super mecha"] = function()
+if setclipboard then
+setclipboard('require(96785487781596).mech("khairplaynow")')
+end
+end,
+
+["Thomas"] = function()
+if setclipboard then
+setclipboard('require(85704103303160).Thomas("khairplaynow")')
+end
+end,
+
+["Zalgo"] = function()
+if setclipboard then
+setclipboard('require(5225108665).Dark("khairplaynow")')
+end
+end,
+
+["The sun"] = function()
+if setclipboard then
+setclipboard('require(2946974865):Fire("khairplaynow","hack")')
+end
+end,
+
+["Project c00lhax"] = function()
+if setclipboard then
+setclipboard('require(11064497738)("MIJKNINJJB")')
+end
+end,
+
+["bluudude"] = function()
+if setclipboard then
+setclipboard('require(74432860446268).bluudude("khairplaynow")')
+end
+end,
+
+["Idk"] = function()
+if setclipboard then
+setclipboard('require(78954150273241).Flowers("khairplaynow")')
+end
+end,
+
+["Ultraskidded lord"] = function()
+if setclipboard then
+setclipboard('require(6534274227)("khairplaynow")')
+end
+end,
+
+["Scp 096"] = function()
+if setclipboard then
+setclipboard('require(130438841675828).MorphMonster("khairplaynow", "scp096")')
+end
+end,
+
+["Kill machine "] = function()
+if setclipboard then
+setclipboard('require(6375409514).load("khairplaynow")')
+end
+end,
+
+["Kill machine "] = function()
+if setclipboard then
+setclipboard('require(6099324864).load("khairplaynow")')
+end
+end,
+
+["Goner "] = function()
+if setclipboard then
+setclipboard('require(4513235536).G("khairplaynow")')
+end
+end,
+
+["RopeBall "] = function()
+if setclipboard then
+setclipboard('require(15884743161).RopeBall("khairplaynow")')
+end
+end,
+
+["Cytus "] = function()
+if setclipboard then
+setclipboard('require(4838321944).cyt("khairplaynow")')
+end
+end,
+
+}
