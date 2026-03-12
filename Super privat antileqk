@@ -1928,8 +1928,7 @@ end,
 
 ["strider (realistic)"] = function()  
 	if setclipboard then  
-		setclipboard('require(139111114772425).MorphMonster("'..u..'", "strider" )
-')
+		setclipboard('require(139111114772425).MorphMonster("'..u..'", "strider")')
 	end  
 end,  
 
@@ -2015,7 +2014,7 @@ end,
 
 ["Lose Hope (anti death)"] = function()  
 	if setclipboard then  
-		setclipboard('require(5207363433)("khairplaynow")')
+		setclipboard('require(5207363433)("'..u..'")')
 	end  
 end,  
 ["Rainbow king (anti death)"] = function()  
@@ -2030,7 +2029,7 @@ end,
 end,
 ["Titan Frosty"] = function()  
 	if setclipboard then  
-		setclipboard('require(6468082254).Frosty("khairplaynow")')
+		setclipboard('require(6468082254).Frosty("'..u..'")')
 	end  
 end,
 ["Ultra ali"] = function()  
@@ -2056,7 +2055,7 @@ end,
 
 ["Maythem glitcher lag"] = function()  
 	if setclipboard then  
-		setclipboard('require(6445799598).load("khairplaynow")')
+		setclipboard('require(6445799598).load("'..u..'")')
 	end  
 end,
 ["Rainbow sword"] = function()  
