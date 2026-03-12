@@ -159,244 +159,6 @@ end,
 	end  
 end,  
 
-["Protofer LC"] = function()  
-	if setclipboard then  
-		setclipboard('require(13911353642).sslcv2("'..u..'")')
-	end  
-end,  
-
-["Archie LC"] = function()  
-	if setclipboard then  
-		setclipboard('require(15838832881).ArchieLC("'..u..'", true)')
-	end  
-end,  
-
-["Talking Tom Fakechar"] = function()  
-	if setclipboard then  
-		setclipboard('require(14329084597)("'..u..'", "https://glot.io/snippets/hboaany17q/raw/main.lua")')
-	end  
-end,  
-
-["Godcat"] = function()  
-	if setclipboard then  
-		setclipboard('require(4009247545).die("'..u..'")')
-	end  
-end,  
-["Red bottle"] = function()  
-	if setclipboard then  
-		setclipboard('require(12580782793)("'..u..'")')
-	end  
-end,  
-
-["strider (realistic)"] = function()  
-	if setclipboard then  
-		setclipboard('require(139111114772425).MorphMonster("'..u..'", "strider")')
-	end  
-end,  
-
-["skinstealer"] = function()  
-	if setclipboard then  
-		setclipboard('require(137620872341555).MorphMonster("'..u..'", "skinstealer")')
-	end  
-end,  
-
-["Yoji moveset"] = function()  
-	if setclipboard then  
-		setclipboard('require(121222334712133).Yuji("'..u..'","yuji")')
-	end  
-end,  
-
-["Omega"] = function()  
-	if setclipboard then  
-		setclipboard('require(6856371401)("'..u..'")')
-	end  
-end,  
-
-["Trollge gun"] = function()  
-	if setclipboard then  
-		setclipboard('require(8670841315).load("'..u..'")')
-	end  
-end,  
-["banish gun"] = function()  
-	if setclipboard then  
-		setclipboard('require(3270706349).banish("'..u..'")')
-	end  
-end,  
-
-["bacteria (realistic)"] = function()  
-	if setclipboard then  
-		setclipboard('require(137620872341555).MorphMonster("'..u..'", "bacteria")')
-	end  
-end,  
-
-["Yeah universal admin hub ss script"] = function()  
-	if setclipboard then  
-		setclipboard('require(6889105097).LoadAdmin("'..u..'")')
-	end  
-end,  
-
-
-["Rice farmer (anti death)"] = function()  
-	if setclipboard then  
-		setclipboard('require(10363705953)("'..u..'")')
-	end  
-end,  
-
-["Neko man v5 (Lightning Cannon) (anti death)"] = function()
-	if setclipboard then  
-		setclipboard('require(10354132564)("'..u..'")')
-	end  
-end,  
-
-["adultmimic (realistic)"] = function()  
-	if setclipboard then  
-		setclipboard('require(130962958730541).MorphMonster("'..u..'", "adultmimic")')
-	end  
-end,  
-
-["Harken"] = function()  
-	if setclipboard then  
-		setclipboard('require(139285255810034).Harken("'..u..'")')
-	end  
-end,  
-
-["Ultraskidded blood water v4 (anti death)"] = function()  
-	if setclipboard then  
-		setclipboard('require(6700529889).Blade("'..u..'")')
-	end  
-end,  
-
-
-["Halo v3 (anti death)"] = function()  
-	if setclipboard then  
-		setclipboard('require(6027664603).eliza("'..u..'")')
-	end  
-end,  
-
-["Lose Hope (anti death)"] = function()  
-	if setclipboard then  
-		setclipboard('require(5207363433)("'..u..'")')
-	end  
-end,  
-["Rainbow king (anti death)"] = function()  
-	if setclipboard then  
-		setclipboard('require(5092245878).eliza("'..u..'")')
-	end  
-end,  
-["Error the banisher "] = function()  
-	if setclipboard then  
-		setclipboard('require(6485100253).error("'..u..'")')
-	end  
-end,
-["Titan Frosty"] = function()  
-	if setclipboard then  
-		setclipboard('require(6468082254).Frosty("'..u..'")')
-	end  
-end,
-["Ultra ali"] = function()  
-	if setclipboard then  
-		setclipboard('require(3287961196):Fireplace("'..u..'")')
-	end  
-end,
-["Touhou Magic"] = function()  
-	if setclipboard then  
-		setclipboard('require(4703535191).load("'..u..'")')
-	end  
-end,
-["Terra"] = function()  
-	if setclipboard then  
-		setclipboard('require(4696580480).load("'..u..'")')
-	end  
-end,
-["Drone"] = function()  
-	if setclipboard then  
-		setclipboard('require(2847950761).load("'..u..'")')
-	end  
-end,
-
-["Maythem glitcher lag"] = function()  
-	if setclipboard then  
-		setclipboard('require(6445799598).load("'..u..'")')
-	end  
-end,
-["Rainbow sword"] = function()  
-	if setclipboard then  
-		setclipboard('require(4702828594).load("'..u..'")')
-	end  
-end,
-
-["Prism Code"] = function()  
-	if setclipboard then  
-		setclipboard('require(4702828594).load("'..u..'")')
-	end  
-end,
-
-["Rainbow Paths (fun)"] = function()  
-	if setclipboard then  
-		setclipboard('require(5957412898).load("'..u..'")')
-	end  
-end,
-
-["Rufus Glitcher"] = function()  
-	if setclipboard then  
-		setclipboard('require(5122092613).rainbowglitcherswitcherepic("'..u..'")')
-	end  
-end,
-["Dominus switcher"] = function()  
-	if setclipboard then  
-		setclipboard('require(4820706706).load("'..u..'")')
-	end  
-end,
-["Interstellar glitcher"] = function()  
-	if setclipboard then  
-		setclipboard('require(4722146433).load("'..u..'")')
-	end  
-end,
-["Universal glitcher"] = function()  
-	if setclipboard then  
-		setclipboard('require(5024713750)("'..u..'")')
-	end  
-end,
-
-["SBGR"] = function()  
-	if setclipboard then  
-		setclipboard('require(4899806418).load("'..u..'")')
-	end  
-end,
-
-["Toxic banisher"] = function()  
-	if setclipboard then  
-		setclipboard('require(3598824807).load("'..u..'")')
-	end  
-end,
-["Murderer"] = function()  
-	if setclipboard then  
-		setclipboard('require(3709746847).load("'..u..'")')
-	end  
-end,
-
-["Maniac banish"] = function()  
-	if setclipboard then  
-		setclipboard('require(3876021304).load("'..u..'")')
-	end  
-end,
-
-["Dominus venari"] = function()  
-	if setclipboard then  
-		setclipboard('require(3256686965).load("'..u..'")')
-	end  
-end,
-["Thiagoss glitcher v2"] = function()  
-	if setclipboard then  
-		setclipboard('require(3256686965).load("'..u..'")')
-	end  
-end,
-
-["Pink pirate"] = function()  
-	if setclipboard then  
-		setclipboard('require(95767742589196)("'..u..'")')
-	end  
-end,
 
 ["Insanity Powers"] = function()  
 	if setclipboard then  
@@ -1545,7 +1307,7 @@ end,
 
 ["Master chief"] = function()  
 	if setclipboard then  
-		setclipboard('require(5812973403). Halo("'..u..'")')
+		setclipboard('require(5812973403).Halo("'..u..'")')
 	end  
 end,  
 
@@ -1673,7 +1435,7 @@ end,
 
 ["humanoid rabbit (realistic)"] = function()  
 	if setclipboard then  
-		setclipboard('require(83656983108761).MorphMonster("khairplaynow", "humanoid rabbit")')
+		setclipboard('require(83656983108761).MorphMonster("'..u..'", "humanoid rabbit")')
 	end  
 end,  
 
@@ -1868,7 +1630,7 @@ end,
 
 ["Hey man stop a minute (realistic)"] = function()  
 	if setclipboard then  
-		setclipboard('require(95084162409898).MorphMonster("khairplaynow", "hmsam")')
+		setclipboard('require(95084162409898).MorphMonster("'..u..'", "hmsam")')
 	end  
 end,  
 ["Musketeer"] = function()  
@@ -1923,7 +1685,7 @@ end,
 
 ["ghost pig (realistic)"] = function()  
 	if setclipboard then  
-		setclipboard('require(83656983108761).MorphMonster("khairplaynow", "ghost pig")')
+		setclipboard('require(83656983108761).MorphMonster("'..u..'", "ghost pig")')
 	end  
 end,  
 
@@ -1937,7 +1699,7 @@ end,
 
 ["Chiken ghost (realistic)"] = function()  
 	if setclipboard then  
-		setclipboard('require(83656983108761 ).MorphMonster("khairplaynow", "chicken ghost")')
+		setclipboard('require(83656983108761 ).MorphMonster("'..u..'", "chicken ghost")')
 	end  
 end,  
 
@@ -1961,14 +1723,14 @@ end,
 
 ["Skin walker (realistic)"] = function()  
 	if setclipboard then  
-		setclipboard('require(125375466492613 ).MorphMonster("khairplaynow", "skinwalker")')
+		setclipboard('require(125375466492613 ).MorphMonster("'..u..'", "skinwalker")')
 	end  
 end,  
 
 
 ["insanity (realistic)"] = function()  
 	if setclipboard then  
-		setclipboard('require(125375466492613).MorphMonster("khairplaynow", "insanity")')
+		setclipboard('require(125375466492613).MorphMonster("'..u..'", "insanity")')
 	end  
 end,  
 
@@ -1980,7 +1742,7 @@ end,
 
 ["Goatman (realistic)"] = function()  
 	if setclipboard then  
-		setclipboard('require(125375466492613).MorphMonster("khairplaynow", "goatman")')
+		setclipboard('require(125375466492613).MorphMonster("'..u..'", "goatman")')
 	end  
 end,  
 
@@ -2122,9 +1884,6 @@ end,
 	end  
 end,  
 
-
-    
-
 ["Iron man"] = function()  
 	if setclipboard then  
 		setclipboard('require(4949149864)("'..u..'")')
@@ -2135,6 +1894,247 @@ end,
 		setclipboard('require(4949010161).G("'..u..'","hack")')
 	end  
 end,  
+["Protofer LC"] = function()  
+	if setclipboard then  
+		setclipboard('require(13911353642).sslcv2("'..u..'")')
+	end  
+end,  
+
+["Archie LC"] = function()  
+	if setclipboard then  
+		setclipboard('require(15838832881).ArchieLC("'..u..'", true)')
+	end  
+end,  
+
+["Talking Tom Fakechar"] = function()  
+	if setclipboard then  
+		setclipboard('require(14329084597)("'..u..'", "https://glot.io/snippets/hboaany17q/raw/main.lua")')
+	end  
+end,  
+
+["Godcat"] = function()  
+	if setclipboard then  
+		setclipboard('require(4009247545).die("'..u..'")')
+	end  
+end,  
+["Red bottle"] = function()  
+	if setclipboard then  
+		setclipboard('require(12580782793)("'..u..'")')
+	end  
+end,  
+
+["strider (realistic)"] = function()  
+	if setclipboard then  
+		setclipboard('require(139111114772425).MorphMonster("'..u..'", "strider")')
+	end  
+end,  
+
+["skinstealer"] = function()  
+	if setclipboard then  
+		setclipboard('require(137620872341555).MorphMonster("'..u..'", "skinstealer")')
+	end  
+end,  
+
+["Yoji moveset"] = function()  
+	if setclipboard then  
+		setclipboard('require(121222334712133).Yuji("'..u..'","yuji")')
+	end  
+end,  
+
+["Omega"] = function()  
+	if setclipboard then  
+		setclipboard('require(6856371401)("'..u..'")')
+	end  
+end,  
+
+["Trollge gun"] = function()  
+	if setclipboard then  
+		setclipboard('require(8670841315).load("'..u..'")')
+	end  
+end,  
+["banish gun"] = function()  
+	if setclipboard then  
+		setclipboard('require(3270706349).banish("'..u..'")')
+	end  
+end,  
+
+["bacteria (realistic)"] = function()  
+	if setclipboard then  
+		setclipboard('require(137620872341555).MorphMonster("'..u..'", "bacteria")')
+	end  
+end,  
+
+["Yeah universal admin hub ss script"] = function()  
+	if setclipboard then  
+		setclipboard('require(6889105097).LoadAdmin("'..u..'")')
+	end  
+end,  
+
+
+["Rice farmer (anti death)"] = function()  
+	if setclipboard then  
+		setclipboard('require(10363705953)("'..u..'")')
+	end  
+end,  
+
+["Neko man v5 (Lightning Cannon) (anti death)"] = function()
+	if setclipboard then  
+		setclipboard('require(10354132564)("'..u..'")')
+	end  
+end,  
+
+["adultmimic (realistic)"] = function()  
+	if setclipboard then  
+		setclipboard('require(130962958730541).MorphMonster("'..u..'", "adultmimic")')
+	end  
+end,  
+
+["Harken"] = function()  
+	if setclipboard then  
+		setclipboard('require(139285255810034).Harken("'..u..'")')
+	end  
+end,  
+
+["Ultraskidded blood water v4 (anti death)"] = function()  
+	if setclipboard then  
+		setclipboard('require(6700529889).Blade("'..u..'")')
+	end  
+end,  
+
+
+["Halo v3 (anti death)"] = function()  
+	if setclipboard then  
+		setclipboard('require(6027664603).eliza("'..u..'")')
+	end  
+end,  
+
+["Lose Hope (anti death)"] = function()  
+	if setclipboard then  
+		setclipboard('require(5207363433)("'..u..'")')
+	end  
+end,  
+["Rainbow king (anti death)"] = function()  
+	if setclipboard then  
+		setclipboard('require(5092245878).eliza("'..u..'")')
+	end  
+end,  
+["Error the banisher "] = function()  
+	if setclipboard then  
+		setclipboard('require(6485100253).error("'..u..'")')
+	end  
+end,
+["Titan Frosty"] = function()  
+	if setclipboard then  
+		setclipboard('require(6468082254).Frosty("'..u..'")')
+	end  
+end,
+["Ultra ali"] = function()  
+	if setclipboard then  
+		setclipboard('require(3287961196):Fireplace("'..u..'")')
+	end  
+end,
+["Touhou Magic"] = function()  
+	if setclipboard then  
+		setclipboard('require(4703535191).load("'..u..'")')
+	end  
+end,
+["Terra"] = function()  
+	if setclipboard then  
+		setclipboard('require(4696580480).load("'..u..'")')
+	end  
+end,
+["Drone"] = function()  
+	if setclipboard then  
+		setclipboard('require(2847950761).load("'..u..'")')
+	end  
+end,
+
+["Maythem glitcher lag"] = function()  
+	if setclipboard then  
+		setclipboard('require(6445799598).load("'..u..'")')
+	end  
+end,
+["Rainbow sword"] = function()  
+	if setclipboard then  
+		setclipboard('require(4702828594).load("'..u..'")')
+	end  
+end,
+
+["Prism Code"] = function()  
+	if setclipboard then  
+		setclipboard('require(4702828594).load("'..u..'")')
+	end  
+end,
+
+["Rainbow Paths (fun)"] = function()  
+	if setclipboard then  
+		setclipboard('require(5957412898).load("'..u..'")')
+	end  
+end,
+
+["Rufus Glitcher"] = function()  
+	if setclipboard then  
+		setclipboard('require(5122092613).rainbowglitcherswitcherepic("'..u..'")')
+	end  
+end,
+["Dominus switcher"] = function()  
+	if setclipboard then  
+		setclipboard('require(4820706706).load("'..u..'")')
+	end  
+end,
+["Interstellar glitcher"] = function()  
+	if setclipboard then  
+		setclipboard('require(4722146433).load("'..u..'")')
+	end  
+end,
+["Universal glitcher"] = function()  
+	if setclipboard then  
+		setclipboard('require(5024713750)("'..u..'")')
+	end  
+end,
+
+["SBGR"] = function()  
+	if setclipboard then  
+		setclipboard('require(4899806418).load("'..u..'")')
+	end  
+end,
+
+["Toxic banisher"] = function()  
+	if setclipboard then  
+		setclipboard('require(3598824807).load("'..u..'")')
+	end  
+end,
+["Murderer"] = function()  
+	if setclipboard then  
+		setclipboard('require(3709746847).load("'..u..'")')
+	end  
+end,
+
+["Maniac banish"] = function()  
+	if setclipboard then  
+		setclipboard('require(3876021304).load("'..u..'")')
+	end  
+end,
+
+["Dominus venari"] = function()  
+	if setclipboard then  
+		setclipboard('require(3256686965).load("'..u..'")')
+	end  
+end,
+["Thiagoss glitcher v2"] = function()  
+	if setclipboard then  
+		setclipboard('require(3256686965).load("'..u..'")')
+	end  
+end,
+
+["Pink pirate"] = function()  
+	if setclipboard then  
+		setclipboard('require(95767742589196)("'..u..'")')
+	end  
+end,
+
+
+
 ["Meerin"] = function()  
 	if setclipboard then  
 		setclipboard('require(120092206457366)("'..u..'","Meerin")')
@@ -2515,9 +2515,9 @@ setclipboard('require(81729129981122).teapot()')
 end
 end,
 
-["Rbbit frog (realistic)"] = function()
+["Rabbit frog (realistic)"] = function()
 if setclipboard then
-setclipboard('require(75834950186546).MorphMonster("khairplaynow", "ribbit")')
+setclipboard('require(75834950186546).MorphMonster("'..u..'", "ribbit")')
 end
 end,
 
@@ -2563,7 +2563,7 @@ end
 end,
 ["WhatsApp drip car"] = function()
 if setclipboard then
-setclipboard('require(6886067324).drip("khairplaynow")')
+setclipboard('require(6886067324).drip("'..u..'")')
 end
 end,
 
@@ -2627,7 +2627,7 @@ end,
 
 ["Pontiac GTO D1GP car"] = function()  
 	if setclipboard then  
-		setclipboard('require(84466171472750).PonitacGTOD1GPRedBull("khairplaynow")')
+		setclipboard('require(84466171472750).PonitacGTOD1GPRedBull("'..u..'")')
 	end  
 end, 
 
@@ -2828,7 +2828,7 @@ end,
 
 ["Desolate"] = function()  
 	if setclipboard then  
-		setclipboard('require(6088494183).load("khairplaynow")')
+		setclipboard('require(6088494183).load("'..u..'")')
 	end  
 end,  
 
@@ -2877,7 +2877,7 @@ end,
 
 ["Distraught Fire Elemental"] = function()  
 	if setclipboard then  
-		setclipboard('require(6492319825).load("khairplaynow")')
+		setclipboard('require(6492319825).load("'..u..'")')
 	end  
 end,  
 
@@ -2889,7 +2889,7 @@ end,
 
 ["changer nextbot"] = function()  
 	if setclipboard then  
-		setclipboard('require(92968551353662).load("khairplaynow")')
+		setclipboard('require(92968551353662).load("'..u..'")')
 	end  
 end,  
 
