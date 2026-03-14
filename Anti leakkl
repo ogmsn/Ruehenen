@@ -2125,6 +2125,7 @@ if setclipboard then
 setclipboard('require(95767742589196)("'..u..'")')
 end
 end,
+
 ["Meerin"] = function()  
 	if setclipboard then  
 		setclipboard('require(120092206457366)("'..u..'","Meerin")')
@@ -2307,7 +2308,7 @@ end,
 	end  
 end,  
 
-["Revenger claws v3"] = function()  
+["Revenger claws v2"] = function()  
 	if setclipboard then  
 		setclipboard('require(6099373575).load("'..u..'")')  
 	end  
